@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BUYOR KING SOLUTION</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+  <nav class="navbar">
+    <div class="logo">BUYOR KING SOLUTION</div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div> <!-- ☰ -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#hero">Accueil</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <li><a href="#" id="lang-switch">EN</a></li>
+  </nav>
+
+
+
+<!-- SECTION HERO -->
+    <header id="hero">
+        <div class="hero-content">
+            <h1>Transférez, épargnez, investissez 
+                <br/> Avec <strong>BUYOR KING SOLUTION</strong>, votre argent travaille pour vous.</h1>
+            <p>BUYOR KING SOLUTION vous propose des services de transfert d’argent, d’échange de devises, ainsi que des solutions d’épargne et d’investissement.  
+            L’argent que vous envoyez ou déposez peut générer des intérêts mensuels ou annuels, pour faire fructifier votre capital en toute confiance.</p>
+            <div class="hero-buttons">
+            <a href="#contact" class="btn">Nous contacter</a>
+            <a href="#services" class="btn btn-secondary">Découvrir nos offres</a>
+            </div>
+        </div>
+    </header>
+
+<section id="apropos" class="section apropos">
+  <div class="container apropos-content">
+    <div class="apropos-image">
+      <img src="ChatGPT Image 11 juil. 2025, 08_20_07.png">
+    </div>
+    <div class="apropos-text">
+      <h2><span class="highlight">À propos</span> de nous</h2>
+      <p>
+        <strong>BUYOR KING SOLUTION</strong> est une entreprise spécialisée dans les <strong>transferts d’argent</strong>, l’<strong>échange de devises</strong> et les <strong>solutions d’épargne et d’investissement</strong>.
+      </p>
+      <p>
+        Notre mission : vous permettre de faire fructifier votre argent en toute sécurité, avec des services rapides, fiables et accessibles à tous.
+      </p>
+      <p>
+        Présente à la frontière d’Aflao et bientôt à Accra, nous accompagnons nos clients vers un avenir financier stable, rentable et serein.
+      </p>
+      <a href="#contact" class="btn btn-secondary">Nous contacter</a>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- SECTION SERVICES -->
+  <section id="services">
+    <h2>Nos Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <h3>💳 Transferts d'argent</h3>
+        <ul>
+          <li>Transferts rapides et sécurisés</li>
+          <li>Nationaux & internationaux</li>
+          <li>Bureaux : Aflao, Accra (bientôt)</li>
+          <li>Offres avec intérêts</li>
+          <li>Tarifs compétitifs</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>📈 Épargne & Investissement</h3>
+        <ul>
+          <li>Comptes avec intérêts mensuels/annuels</li>
+          <li>Dépôts à terme (4 % à 7 %)</li>
+          <li>Épargne garantie via microfinance</li>
+          <li>Investissement à taux fixe</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🏘️ Location & Hébergement</h3>
+        <ul>
+          <li>Location de voitures au Ghana</li>
+          <li>Villas & appartements meublés</li>
+          <li>Disponibles à Accra</li>
+          <li>Expansion prévue</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION CONTACT -->
+<section id="contact" class="section contact-section">
+         <h2>Contactez-nous</h2>
+  <div class="container contact-container"><br/>
+    <div class="contact-info">
+      
+      <p>📧<strong>Email :</strong> info@bks.com</p>
+      <p>📍<strong>Adresse :</strong> 123 Aflao, Ghana</p>
+      <p>📞<strong>Téléphone :</strong> (+233) 456-78909</p>
+      <p><strong>Horaires :</strong></p>
+      <ul>
+        🕒Lundi - Vendredi : 9h00 - 17h00
+        <br/>🕒Samedi : 10h00 - 15h00
+        <br/>⛔Dimanche : Fermé
+      </ul>
+    </div>
+
+    <form class="contact-form">
+      <h3>Envoyez-nous un message</h3>
+      <input type="text" placeholder="Nom" required>
+      <input type="tel" placeholder="Téléphone" required>
+      <input type="email" placeholder="Email" required>
+      <textarea rows="5" placeholder="Message" required></textarea>
+      <button type="submit" class="btn btn-secondary">Envoyer le message</button>
+    </form>
+  </div>
+</section>
+
+  <footer>
+    <p>© 2025 BUYOR KING SOLUTION – Tous droits réservés</p>
+  </footer>
+
+<script src="script.js"></script>
+<script>
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    });
+    
+    const langSwitch = document.getElementById('lang-switch');
+    let currentLang = 'fr';
+
+    langSwitch.addEventListener('click', function (e) {
+      e.preventDefault();
+      currentLang = currentLang === 'fr' ? 'en' : 'fr';
+      langSwitch.textContent = currentLang.toUpperCase() === 'FR' ? 'EN' : 'FR';
+
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = el.getAttribute('data-lang') === currentLang ? 'inline' : 'none';
+      });
+    });
+</script>
+
+
+</body>
+</html>

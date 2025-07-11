@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BUYOR KING SOLUTION</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">BUYOR KING SOLUTION</div>
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#hero"><span data-lang="fr">Accueil</span><span data-lang="en" style="display:none;">Home</span></a></li>
+    <li><a href="#apropos"><span data-lang="fr">À propos</span><span data-lang="en" style="display:none;">About</span></a></li>
+    <li><a href="#services"><span data-lang="fr">Services</span><span data-lang="en" style="display:none;">Services</span></a></li>
+    <li><a href="#contact"><span data-lang="fr">Contact</span><span data-lang="en" style="display:none;">Contact</span></a></li>
+    <li><a href="#" id="lang-switch">EN</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header id="hero">
+  <div class="hero-content">
+    <h1>
+      <span data-lang="fr">Transférez, épargnez, investissez<br>Avec <strong>BUYOR KING SOLUTION</strong>, votre argent travaille pour vous.</span>
+      <span data-lang="en" style="display:none;">Transfer, Save, Invest<br>With <strong>BUYOR KING SOLUTION</strong>, your money works for you.</span>
+    </h1>
+    <p>
+      <span data-lang="fr">BUYOR KING SOLUTION vous propose des services de transfert d’argent, d’échange de devises, ainsi que des solutions d’épargne et d’investissement.</span>
+      <span data-lang="en" style="display:none;">BUYOR KING SOLUTION offers money transfer, currency exchange, and savings and investment solutions.</span>
+    </p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn"><span data-lang="fr">Nous contacter</span><span data-lang="en" style="display:none;">Contact Us</span></a>
+      <a href="#services" class="btn btn-secondary"><span data-lang="fr">Découvrir nos offres</span><span data-lang="en" style="display:none;">Discover Our Offers</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- FOOTER -->
+<footer>
+  <p><span data-lang="fr">© 2025 BUYOR KING SOLUTION – Tous droits réservés</span><span data-lang="en" style="display:none;">© 2025 BUYOR KING SOLUTION – All rights reserved</span></p>
+</footer>
+
+<!-- Script -->
+<script>
+const toggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+toggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+const langSwitch = document.getElementById('lang-switch');
+let currentLang = 'fr';
+langSwitch.addEventListener('click', function (e) {
+  e.preventDefault();
+  currentLang = currentLang === 'fr' ? 'en' : 'fr';
+  langSwitch.textContent = currentLang === 'fr' ? 'EN' : 'FR';
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    el.style.display = el.getAttribute('data-lang') === currentLang ? 'inline' : 'none';
+  });
+});
+</script>
+</body>
+</html>
